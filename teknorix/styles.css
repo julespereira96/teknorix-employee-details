@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  margin: 30px 30px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* End of delete base styles */
+/* Steps */
+.step {
+  position: relative;
+  min-height: 16px;
+  color: grey;
+}
+
+.step + .step {
+  margin-top: 24px;
+}
+
+.step > div:first-child {
+  position: static;
+  height: 0;
+}
+
+.step > div:not(:first-child) {
+  margin-left: 24px;
+  padding-left: 16px;
+}
+
+/* Circle */
+.circle {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: 0 0 0 3px white;
+}
+
+.circle.active {
+  background-color: white;
+  color: #13c2c2;
+  border: 1px solid #13c2c2;
+}
+
+.circle.active::after {
+  background-color: #c3ccd8;
+}
+
+/* Vertical Line */
+.circle:after {
+  content: " ";
+  position: absolute;
+  display: block;
+  top: 1px;
+  right: 50%;
+  bottom: 1px;
+  left: 50%;
+  height: 100%;
+  width: 2px;
+  transform: scale(1, 2);
+  transform-origin: 50% -100%;
+  background-color: #c3ccd8;
+  z-index: -1;
+}
+
+.step:last-child .circle:after {
+  display: none;
+}
+
+.step:first-child .circle:after {
+  height: 100%;
+  z-index: -1;
+}
+
+/* Stepper Titles */
+.title {
+  line-height: 24px;
+  font-weight: bold;
+  color: #13c2c2;
+}
+
+.caption {
+  font-size: 12.8px;
+}
+
+.info {
+  font-size: 20px;
+  word-spacing: 5px;
+}
+
+@media only screen and (max-width: 753px) {
+  .info {
+    margin-top: 50px;
+  }
+}
+
+.details {
+  color: #9fa5b1;
+  font-size: 15px;
+}
+
+.label-name:after {
+  content: " *";
+  color: red;
+}
+
+.inactive {
+  background-color: #c9ccd2;
+  color: white;
+}
+
+.title-inactive {
+  color: #29364f;
+  font-weight: 500;
+}
+
+.jules {
+  border-radius: 50%;
+  width: 80px;
+  margin-left: 50px;
+}
+
+i {
+  cursor: pointer;
+}
+
+.Married-option {
+  place-self: flex-start;
+}
+
+.form-check-input:checked {
+  background-color: #13c2c2;
+  border-color: #13c2c2;
+}
+
+.header {
+  font-size: 30px;
+}
+
+.fa-trash-alt,
+.remove {
+  color: red;
+}
+
+@media only screen and (max-width: 425px) {
+  .remove {
+    font-size: 12px;
+  }
+}
+
+.fa-pen,
+.edit {
+  color: #13c2c2;
+}
+
+@media only screen and (max-width: 425px) {
+  .Edit {
+    font-size: 12px;
+  }
+}
+
+.lennart {
+  border: 1px solid #13c2c2;
+}
+
+.form-control {
+  background-color: #fafbfb !important;
+}
+
+.select {
+  background-color: white;
+  border: 1px solid #13c2c2;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+select {
+  color: grey;
+}
+
+.btn-small {
+  background-color: #fafafa;
+  color: #878f9c;
+  border-color: #fafafa;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.btn-large {
+  background-color: #13c2c2;
+  color: white;
+  border-color: #13c2c2;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .text-right {
+    text-align: center !important;
+  }
+}

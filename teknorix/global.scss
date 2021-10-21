@@ -1,0 +1,28 @@
+$color1: red;
+$color2: #13c2c2;
+$color3: grey;
+$color4: #4285f4;
+$color5: #29364f;
+$color6: #c9ccd2;
+$color7: white;
+$color8: #c3ccd8;
+$color9: #9fa5b1;
+$color10:#878f9c;
+$color11:#fafafa;
+$color12:#fafbfb ;
+
+
+
+$fontsize1: 18px;
+$fontsize2: 16px;
+$fontsize3: 24px;
+$fontsize4: 1px;
+$fontsize5: 2px;
+$fontsize6: 12.8px;
+$fontsize7: 20px;
+
+
+
+@mixin border-style-1 {
+  border: 1px solid $color2;
+}

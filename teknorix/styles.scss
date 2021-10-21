@@ -1,0 +1,212 @@
+@import "./global.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: $fontsize1;
+  font-family: "Roboto", sans-serif;
+  margin: 30px 30px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+/* End of delete base styles */
+
+/* Steps */
+.step {
+  position: relative;
+  min-height: $fontsize2;
+  color: $color3;
+}
+.step + .step {
+  margin-top: $fontsize3;
+}
+.step > div:first-child {
+  position: static;
+  height: 0;
+}
+.step > div:not(:first-child) {
+  margin-left: $fontsize3;
+  padding-left: $fontsize2;
+}
+
+/* Circle */
+.circle {
+  position: relative;
+  width: $fontsize3;
+  height: $fontsize3;
+  line-height: $fontsize3;
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: 0 0 0 3px $color7;
+  &.active {
+    background-color: $color7;
+    color: $color2;
+    border: 1px solid $color2;
+
+    &::after {
+      background-color: $color8;
+    }
+  }
+}
+
+/* Vertical Line */
+.circle:after {
+  content: " ";
+  position: absolute;
+  display: block;
+  top: $fontsize4;
+  right: 50%;
+  bottom: $fontsize4;
+  left: 50%;
+  height: 100%;
+  width: $fontsize5;
+  transform: scale(1, 2);
+  transform-origin: 50% -100%;
+  background-color: $color8;
+  z-index: -1;
+}
+.step:last-child .circle:after {
+  display: none;
+}
+
+.step:first-child .circle:after {
+  height: 100%;
+  z-index: -1;
+}
+
+/* Stepper Titles */
+.title {
+  line-height: $fontsize3;
+  font-weight: bold;
+  color: $color2;
+}
+.caption {
+  font-size: $fontsize6;
+}
+
+.info {
+  font-size: $fontsize7;
+  word-spacing: 5px;
+
+  @media only screen and (max-width: 753px) {
+    margin-top: 50px;
+  }
+}
+
+.details {
+  color: $color9;
+  font-size: 15px;
+}
+
+.label-name:after {
+  content: " *";
+  color: $color1;
+}
+
+.inactive {
+  background-color: $color6;
+  color: $color7;
+}
+
+.title-inactive {
+  color: $color5;
+  font-weight: 500;
+}
+
+.jules {
+  border-radius: 50%;
+  width: 80px;
+  margin-left: 50px;
+}
+
+i {
+  cursor: pointer;
+}
+
+.Married-option {
+  place-self: flex-start;
+}
+
+.form-check-input:checked {
+  background-color: $color2;
+  border-color: $color2;
+}
+
+.header {
+  font-size: 30px;
+}
+.fa-trash-alt,
+.remove {
+  color: $color1;
+}
+
+.remove {
+  @media only screen and (max-width: 425px) {
+    font-size: 12px;
+  }
+}
+
+.fa-pen,
+.edit {
+  color: $color2;
+}
+
+.Edit {
+  @media only screen and (max-width: 425px) {
+    font-size: 12px;
+  }
+}
+
+.lennart {
+  @include border-style-1;
+}
+
+.form-control {
+  background-color: $color12 !important;
+}
+
+.select {
+  background-color: $color7;
+  @include border-style-1;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+select {
+  color: $color3;
+}
+
+.btn-small {
+  background-color: $color11;
+  color: $color10;
+  border-color: $color11;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.btn-large {
+  background-color: $color2;
+  color: $color7;
+  border-color: $color2;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .text-right {
+    text-align: center !important;
+  }
+}
